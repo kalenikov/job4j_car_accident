@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class AppTest {
     @Test
-    private void dump() {
+    public void dump() {
         assert true;
     }
 }

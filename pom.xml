@@ -10,7 +10,6 @@
 
     <name>job4j_car_accident</name>
     <description>A simple job4j_car_accident.</description>
-    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
