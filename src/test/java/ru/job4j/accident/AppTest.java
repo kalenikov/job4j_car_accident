@@ -1,4 +1,4 @@
-package ru.job4j.car_accident;
+package ru.job4j.accident;
 
 import org.junit.Test;
 
