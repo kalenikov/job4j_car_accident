@@ -19,13 +19,20 @@
         <table class="table">
             <thead>
             <tr>
-                <th>item</th>
+                <th>id</th>
+                <th>name</th>
+                <th>text</th>
+                <th>address</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${items}" var="item">
+            <jsp:useBean id="accidents" scope="request" type="java.util.List<ru.job4j.accident.model.Accident>"/>
+            <c:forEach items="${accidents}" var="accident">
                 <tr>
-                    <td>${item} </td>
+                    <td>${accident.id}</td>
+                    <td>${accident.name}</td>
+                    <td>${accident.text}</td>
+                    <td>${accident.address}</td>
                 </tr>
             </c:forEach>
             </tbody>
