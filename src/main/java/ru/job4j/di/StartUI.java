@@ -1,7 +1,5 @@
 package ru.job4j.di;
 
-import ru.job4j.tracker.ConsoleInput;
-
 public class StartUI {
     private Store store;
     private ConsoleInput input;

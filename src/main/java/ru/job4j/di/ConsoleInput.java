@@ -13,8 +13,4 @@ public class ConsoleInput {
     public int askInt(String question) {
         return Integer.valueOf(askStr(question));
     }
-
-    public ConsoleInput(Scanner scanner) {
-        this.scanner = scanner;
-    }
 }

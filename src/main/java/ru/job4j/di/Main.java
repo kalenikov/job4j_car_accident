@@ -1,7 +1,5 @@
 package ru.job4j.di;
 
-import ru.job4j.tracker.ConsoleInput;
-
 public class Main {
     public static void main(String[] args) {
         Context context = new Context();
