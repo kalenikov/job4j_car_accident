@@ -12,7 +12,7 @@ import java.util.Map;
 public class AccidentInMemRepository implements AccidentRepository {
     private final Map<Integer, Accident> store = new HashMap<>();
 
-    {
+    public AccidentInMemRepository() {
         store.put(1, new Accident(1, "name1", "text1", "address1"));
         store.put(2, new Accident(1, "name2", "text2", "address2"));
     }
@@ -21,4 +21,5 @@ public class AccidentInMemRepository implements AccidentRepository {
     public List<Accident> findAll() {
         return new ArrayList<>(store.values());
     }
+
 }
