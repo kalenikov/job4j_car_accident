@@ -15,6 +15,7 @@
     <h4>
         Hello : ${user}
     </h4>
+    <a href="<c:url value='/create'/>">Create accident</a>
     <div class="row">
         <table class="table">
             <thead>

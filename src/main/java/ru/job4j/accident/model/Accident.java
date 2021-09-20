@@ -1,14 +1,13 @@
 package ru.job4j.accident.model;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode(of = {"id"})
 @Getter
+@NoArgsConstructor
+@Setter
 public class Accident {
     private int id;
     private String name;
