@@ -26,4 +26,9 @@ public class AccidentInMemRepository implements AccidentRepository {
     public void add(Accident accident) {
         store.put(accident.getId(), accident);
     }
+
+    @Override
+    public Accident get(int id) {
+        return store.get(id);
+    }
 }

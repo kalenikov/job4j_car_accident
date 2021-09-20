@@ -7,4 +7,5 @@ import java.util.List;
 public interface AccidentRepository {
     List<Accident> findAll();
     void add(Accident accident);
+    Accident get(int id);
 }

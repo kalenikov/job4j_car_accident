@@ -31,7 +31,7 @@
             <c:forEach items="${accidents}" var="accident">
                 <tr>
                     <td>${accident.id}</td>
-                    <td>${accident.name}</td>
+                    <td><a href="<c:url value='/update?id=${accident.id}'/>">${accident.name}</a></td>
                     <td>${accident.text}</td>
                     <td>${accident.address}</td>
                 </tr>

@@ -45,25 +45,5 @@
         </div>
     </div>
 </div>
-
-<form action="<c:url value='/save'/>" method='POST'>
-    <table>
-        <tr>
-            <td>Название:</td>
-            <td><input type='text' name='name'></td>
-        </tr>
-        <tr>
-            <td>Название:</td>
-            <td><input type='text' name='name'></td>
-        </tr>
-        <tr>
-            <td>Название:</td>
-            <td><input type='text' name='name'></td>
-        </tr>
-        <tr>
-            <td colspan='2'><input name="submit" type="submit" value="Сохранить"/></td>
-        </tr>
-    </table>
-</form>
 </body>
 </html>
