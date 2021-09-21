@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.job4j.accident.model.Accident;
-import ru.job4j.accident.repository.AccidentRepository;
+import ru.job4j.accident.service.AccidentService;
 
 @Controller
 public class AccidentControl {
-    private final AccidentRepository repo;
+    private final AccidentService as;
 
-    public AccidentControl(AccidentRepository repo) {
-        this.repo = repo;
+    public AccidentControl(AccidentService accidentService) {
+        this.as = accidentService;
     }
 
     @GetMapping("/create")
@@ -24,13 +24,13 @@ public class AccidentControl {
 
     @PostMapping("/save")
     public String save(@ModelAttribute Accident accident) {
-        repo.add(accident);
+        as.save(accident);
         return "redirect:/";
     }
 
     @GetMapping("/update")
     public String update(@RequestParam("id") int id, Model model) {
-        model.addAttribute("accident", repo.get(id));
+        model.addAttribute("accident", as.get(id));
         return "accident/edit";
     }
 }

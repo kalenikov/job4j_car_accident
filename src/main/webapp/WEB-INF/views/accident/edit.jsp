@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label col-sm-3" for="address">Address</label>
-                        <input type="text" class="form-control col-sm-3" name="description" id="address"
+                        <input type="text" class="form-control col-sm-3" name="address" id="address"
                                value="${accident.address}" placeholder="Input accident address">
                     </div>
                     <div class="form-group row">

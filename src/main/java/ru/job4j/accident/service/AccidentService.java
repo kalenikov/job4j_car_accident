@@ -15,4 +15,12 @@ public class AccidentService {
     public List<Accident> findAll() {
         return repo.findAll();
     }
+
+    public Accident get(int id) {
+        return repo.get(id);
+    }
+
+    public Accident save(Accident accident) {
+        return repo.save(accident);
+    }
 }
