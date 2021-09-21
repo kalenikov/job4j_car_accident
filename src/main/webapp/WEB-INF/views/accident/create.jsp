@@ -34,6 +34,18 @@
                         <input type="text" class="form-control col-sm-3" name="address" id="address"
                                placeholder="Input accident address">
                     </div>
+
+                    <div class="form-group row">
+                        <jsp:useBean id="types" scope="request"
+                                     type="java.util.List<ru.job4j.accident.model.AccidentType>"/>
+                        <label class="col-form-label col-sm-3" for="type.id">Type</label>
+                        <select class="form-control col-sm-3" id="type.id" name="type.id">
+                            <c:forEach items="${types}" var="type">
+                                <option value="${type.id}">${type.name}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+
                     <div class="form-group row">
                         <label class="col-form-label col-sm-3"></label>
                         <button type="submit" class="btn btn-dark">Save</button>

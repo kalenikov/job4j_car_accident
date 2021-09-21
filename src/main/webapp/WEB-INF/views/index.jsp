@@ -24,6 +24,7 @@
                 <th>name</th>
                 <th>text</th>
                 <th>address</th>
+                <th>type</th>
             </tr>
             </thead>
             <tbody>
@@ -34,6 +35,7 @@
                     <td><a href="<c:url value='/update?id=${accident.id}'/>">${accident.name}</a></td>
                     <td>${accident.text}</td>
                     <td>${accident.address}</td>
+                    <td>${accident.type.name}</td>
                 </tr>
             </c:forEach>
             </tbody>

@@ -3,6 +3,7 @@ package ru.job4j.accident.repository;
 import org.springframework.stereotype.Repository;
 import ru.job4j.accident.model.Accident;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,14 +14,21 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AccidentInMemRepository implements AccidentRepository {
     private final Map<Integer, Accident> store = new HashMap<>();
     private final AtomicInteger counter = new AtomicInteger(0);
+    private final TypesInMemRepository typesRepo;
 
-    public AccidentInMemRepository() {
-        save(new Accident("name1", "text1", "address1"));
-        save(new Accident("name2", "text2", "address2"));
+    public AccidentInMemRepository(TypesInMemRepository typesRepo) {
+        this.typesRepo = typesRepo;
+    }
+
+    @PostConstruct
+    public void init() {
+        save(new Accident("name1", "text1", "address1", typesRepo.get(1)));
+        save(new Accident("name2", "text2", "address2", typesRepo.get(2)));
     }
 
     @Override
     public List<Accident> findAll() {
+        System.out.println(typesRepo.findAll());
         return new ArrayList<>(store.values());
     }
 
