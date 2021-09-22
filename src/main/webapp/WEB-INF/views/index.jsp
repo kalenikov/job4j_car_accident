@@ -25,6 +25,7 @@
                 <th>text</th>
                 <th>address</th>
                 <th>type</th>
+                <th>rules</th>
             </tr>
             </thead>
             <tbody>
@@ -36,6 +37,11 @@
                     <td>${accident.text}</td>
                     <td>${accident.address}</td>
                     <td>${accident.type.name}</td>
+                    <td>
+                        <c:forEach items="${accident.rules}" var="rule">
+                            ${rule.name}
+                        </c:forEach>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>

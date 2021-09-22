@@ -47,6 +47,17 @@
                     </div>
 
                     <div class="form-group row">
+                        <jsp:useBean id="rules" scope="request"
+                                     type="java.util.Collection<ru.job4j.accident.model.Rule>"/>
+                        <label class="col-form-label col-sm-3" for="ruleIds">Rules</label>
+                        <select class="form-control col-sm-3" id="ruleIds" name="ruleIds" multiple>
+                            <c:forEach items="${rules}" var="rule">
+                                <option value="${rule.id}">${rule.name}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+
+                    <div class="form-group row">
                         <label class="col-form-label col-sm-3"></label>
                         <button type="submit" class="btn btn-dark">Save</button>
                     </div>

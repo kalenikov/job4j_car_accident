@@ -42,6 +42,11 @@
                                value="${accident.type}" placeholder="Select accident type">
                     </div>
                     <div class="form-group row">
+                        <label class="col-form-label col-sm-3" for="type">Rules</label>
+                        <input type="text" class="form-control col-sm-3" name="rules" id="rules"
+                               value="${accident.rules}" placeholder="Select accident rules">
+                    </div>
+                    <div class="form-group row">
                         <label class="col-form-label col-sm-3"></label>
                         <button type="submit" class="btn btn-dark">Save</button>
                     </div>
