@@ -13,9 +13,9 @@ public class TypesInMemRepository {
     private final Map<Integer, AccidentType> store = new HashMap<>();
 
     public TypesInMemRepository() {
-        store.put(1, new AccidentType(1, "Car + car"));
-        store.put(2, new AccidentType(2, "Car + man"));
-        store.put(3, new AccidentType(3, "Car + bicycle"));
+        store.put(1, AccidentType.of(1, "Car + car"));
+        store.put(2, AccidentType.of(2, "Car + man"));
+        store.put(3, AccidentType.of(3, "Car + bicycle"));
     }
 
     public List<AccidentType> findAll() {

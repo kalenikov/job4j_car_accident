@@ -13,9 +13,9 @@ public class RulesInMemRepository {
     private final Map<Integer, Rule> store = new HashMap<>();
 
     public RulesInMemRepository() {
-        store.put(1, new Rule(1, "rule1"));
-        store.put(2, new Rule(2, "rule2"));
-        store.put(3, new Rule(3, "rule3"));
+        store.put(1, Rule.of(1, "rule1"));
+        store.put(2, Rule.of(2, "rule2"));
+        store.put(3, Rule.of(3, "rule3"));
     }
 
     public List<Rule> findAll() {

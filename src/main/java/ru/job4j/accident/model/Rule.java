@@ -2,7 +2,7 @@ package ru.job4j.accident.model;
 
 import lombok.*;
 
-@AllArgsConstructor
+@AllArgsConstructor(staticName = "of")
 @ToString
 @EqualsAndHashCode(of = {"id"})
 @Getter

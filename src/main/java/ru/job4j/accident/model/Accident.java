@@ -2,9 +2,10 @@ package ru.job4j.accident.model;
 
 import lombok.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
-@AllArgsConstructor
+@AllArgsConstructor(staticName = "of")
 @ToString
 @EqualsAndHashCode(of = {"id"})
 @Getter
@@ -16,7 +17,7 @@ public class Accident {
     private String text;
     private String address;
     private AccidentType type;
-    private Set<Rule> rules;
+    private Set<Rule> rules = new HashSet<>();
 
     public Accident(String name, String text, String address, AccidentType type, Set<Rule> rules) {
         this.name = name;

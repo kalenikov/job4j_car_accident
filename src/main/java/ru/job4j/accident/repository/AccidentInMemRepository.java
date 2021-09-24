@@ -27,14 +27,14 @@ public class AccidentInMemRepository implements AccidentRepository {
                 "text1",
                 "address1",
                 typesRepo.get(1),
-                Set.of(rulesRepo.get(1))));
+                new HashSet<>(Set.of(rulesRepo.get(1)))));
 
         save(new Accident(
                 "name2",
                 "text2",
                 "address2",
                 typesRepo.get(2),
-                Set.of(rulesRepo.get(1), rulesRepo.get(2))));
+                new HashSet<>(Set.of(rulesRepo.get(1), rulesRepo.get(2)))));
     }
 
     @Override
