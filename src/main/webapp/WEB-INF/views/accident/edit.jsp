@@ -36,15 +36,27 @@
                         <input type="text" class="form-control col-sm-3" name="address" id="address"
                                value="${accident.address}" placeholder="Input accident address">
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-form-label col-sm-3" for="type">Type</label>
-                        <input type="text" class="form-control col-sm-3" name="type" id="type"
-                               value="${accident.type}" placeholder="Select accident type">
+                        <jsp:useBean id="types" scope="request"
+                                     type="java.util.List<ru.job4j.accident.model.AccidentType>"/>
+                        <label class="col-form-label col-sm-3" for="type.id">Type</label>
+                        <select class="form-control col-sm-3" id="type.id" name="type.id">
+                            <c:forEach items="${types}" var="type">
+                                <option value="${type.id}">${type.name}</option>
+                            </c:forEach>
+                        </select>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-form-label col-sm-3" for="type">Rules</label>
-                        <input type="text" class="form-control col-sm-3" name="rules" id="rules"
-                               value="${accident.rules}" placeholder="Select accident rules">
+                        <jsp:useBean id="rules" scope="request"
+                                     type="java.util.Collection<ru.job4j.accident.model.Rule>"/>
+                        <label class="col-form-label col-sm-3" for="ruleIds">Rules</label>
+                        <select class="form-control col-sm-3" id="ruleIds" name="ruleIds" multiple>
+                            <c:forEach items="${rules}" var="rule">
+                                <option value="${rule.id}">${rule.name}</option>
+                            </c:forEach>
+                        </select>
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label col-sm-3"></label>

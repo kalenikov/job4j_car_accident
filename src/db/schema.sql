@@ -24,7 +24,7 @@ CREATE TABLE accident
 CREATE TABLE accident_rules
 (
     acc_id  int references accident,
-    rule_id int references acc_types
+    rule_id int references rules
 );
 
 insert into acc_types(name)
