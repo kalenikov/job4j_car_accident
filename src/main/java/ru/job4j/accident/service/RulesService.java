@@ -3,7 +3,7 @@ package ru.job4j.accident.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.job4j.accident.model.Rule;
-import ru.job4j.accident.repository.RulesInMemRepository;
+import ru.job4j.accident.repository.hbm.RulesHibernateRepository;
 
 import java.util.Collection;
 
@@ -11,7 +11,7 @@ import java.util.Collection;
 
 public class RulesService {
     @Autowired
-    private RulesInMemRepository repo;
+    private RulesHibernateRepository repo;
 
     public Collection<Rule> findAll() {
         return repo.findAll();

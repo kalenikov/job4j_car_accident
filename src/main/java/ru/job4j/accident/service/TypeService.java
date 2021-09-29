@@ -3,7 +3,7 @@ package ru.job4j.accident.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.job4j.accident.model.AccidentType;
-import ru.job4j.accident.repository.TypesInMemRepository;
+import ru.job4j.accident.repository.hbm.TypesHibernateRepository;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TypeService {
     @Autowired
-    private TypesInMemRepository repo;
+    private TypesHibernateRepository repo;
 
     public List<AccidentType> findAll() {
         return repo.findAll();

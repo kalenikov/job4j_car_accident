@@ -39,7 +39,7 @@
                         <jsp:useBean id="types" scope="request"
                                      type="java.util.List<ru.job4j.accident.model.AccidentType>"/>
                         <label class="col-form-label col-sm-3" for="type.id">Type</label>
-                        <select class="form-control col-sm-3" id="type.id" name="type.id">
+                        <select required class="form-control col-sm-3" id="type.id" name="type.id">
                             <c:forEach items="${types}" var="type">
                                 <option value="${type.id}">${type.name}</option>
                             </c:forEach>
@@ -50,7 +50,7 @@
                         <jsp:useBean id="rules" scope="request"
                                      type="java.util.Collection<ru.job4j.accident.model.Rule>"/>
                         <label class="col-form-label col-sm-3" for="ruleIds">Rules</label>
-                        <select class="form-control col-sm-3" id="ruleIds" name="ruleIds" multiple>
+                        <select required class="form-control col-sm-3" id="ruleIds" name="ruleIds" multiple>
                             <c:forEach items="${rules}" var="rule">
                                 <option value="${rule.id}">${rule.name}</option>
                             </c:forEach>

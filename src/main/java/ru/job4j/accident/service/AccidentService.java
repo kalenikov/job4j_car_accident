@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class AccidentService {
-    @Qualifier("accidentJdbcRepository")
+    @Qualifier("accidentHibernateRepository")
     @Autowired
     private AccidentRepository repo;
 
