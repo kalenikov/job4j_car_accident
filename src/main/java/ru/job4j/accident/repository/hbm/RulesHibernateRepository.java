@@ -8,7 +8,7 @@ import java.util.List;
 
 import static ru.job4j.accident.repository.hbm.HibernateUtil.tx;
 
-@Repository
+//@Repository
 public class RulesHibernateRepository {
     private final SessionFactory sf;
 

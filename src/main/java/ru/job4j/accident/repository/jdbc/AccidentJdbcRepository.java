@@ -13,7 +13,7 @@ import ru.job4j.accident.repository.AccidentRepository;
 import java.sql.PreparedStatement;
 import java.util.*;
 
-@Repository
+//@Repository
 public class AccidentJdbcRepository implements AccidentRepository {
     private final JdbcTemplate jdbc;
 

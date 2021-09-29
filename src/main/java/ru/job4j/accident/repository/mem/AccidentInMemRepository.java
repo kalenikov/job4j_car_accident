@@ -1,13 +1,14 @@
-package ru.job4j.accident.repository;
+package ru.job4j.accident.repository.mem;
 
 import org.springframework.stereotype.Repository;
 import ru.job4j.accident.model.Accident;
+import ru.job4j.accident.repository.AccidentRepository;
 
 import javax.annotation.PostConstruct;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Repository
+//@Repository
 public class AccidentInMemRepository implements AccidentRepository {
     private final Map<Integer, Accident> store = new HashMap<>();
     private final AtomicInteger counter = new AtomicInteger(0);
