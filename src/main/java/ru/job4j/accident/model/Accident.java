@@ -22,11 +22,11 @@ public class Accident {
     private String text;
     private String address;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "type_id")
     private AccidentType type;
 
-    @ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.MERGE})
     @JoinTable(name = "accident_rules",
             joinColumns = @JoinColumn(name = "acc_id"),
             inverseJoinColumns = @JoinColumn(name = "rule_id"))
