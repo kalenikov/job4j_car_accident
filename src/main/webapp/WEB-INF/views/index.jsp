@@ -13,7 +13,7 @@
 <body>
 <div class="container pt-3">
     <h4>
-        Hello : ${user}
+        Login as : ${user.username}
     </h4>
     <a href="<c:url value='/create'/>">Create accident</a>
     <div class="row">
