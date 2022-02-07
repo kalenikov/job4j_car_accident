@@ -1,6 +1,5 @@
 package ru.job4j.accident.control;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,8 +8,11 @@ import ru.job4j.accident.service.AccidentService;
 
 @Controller
 public class IndexControl {
-    @Autowired
-    private AccidentService as;
+    private final AccidentService as;
+
+    public IndexControl(AccidentService as) {
+        this.as = as;
+    }
 
     @GetMapping("/")
     public String index(Model model) {

@@ -10,3 +10,5 @@ Used technologies:
 - PostgreSQL
 - Hibernate
 - Bootstrap
+
+![](https://img.shields.io/badge/java-%3E%3D%208%20-orange)

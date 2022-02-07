@@ -15,7 +15,6 @@ public class AccidentInMemRepository implements AccidentRepository {
     private final TypesInMemRepository typesRepo;
     private final RulesInMemRepository rulesRepo;
 
-
     public AccidentInMemRepository(TypesInMemRepository typesRepo, RulesInMemRepository rulesRepo) {
         this.typesRepo = typesRepo;
         this.rulesRepo = rulesRepo;

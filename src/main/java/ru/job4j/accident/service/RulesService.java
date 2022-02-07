@@ -8,10 +8,12 @@ import ru.job4j.accident.repository.data.RuleRepository;
 import java.util.List;
 
 @Service
-
 public class RulesService {
-    @Autowired
-    private RuleRepository repo;
+    private final RuleRepository repo;
+
+    public RulesService(RuleRepository repo) {
+        this.repo = repo;
+    }
 
     public List<Rule> findAll() {
         return (List<Rule>) repo.findAll();

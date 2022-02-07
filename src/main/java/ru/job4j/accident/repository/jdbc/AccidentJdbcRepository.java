@@ -21,7 +21,6 @@ public class AccidentJdbcRepository implements AccidentRepository {
         this.jdbc = jdbc;
     }
 
-
     public Accident saveNew(Accident accident) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbc.update(connection -> {
